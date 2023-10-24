@@ -1,0 +1,26 @@
+{
+    "articles": [{
+        "source": {
+            "id": "null", 
+            "name": "CNBC"
+            }, 
+            "author": "Pia Singh", 
+            "title": "Stocks making the biggest moves premarket: DASH, ARM, PYPL - CNBC, description: These are the stocks making headlines in premarket trading Monday.", 
+            "url": "https://www.cnbc.com/2023/09/18/stocks-making-the-biggest-moves-premarket-dash-arm-pypl.html", 
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/106516157-1588351785968gettyimages-1209050413.jpeg?v=1695040122&w=1920&h=1080",
+            "publishedAt": "2023-09-18T12:28:42Z", 
+            "content": "Check out the companies making headlines in premarket trading. PayPal Shares of the payments giant fell more than 1% premarket after MoffettNathanson downgraded the stock to market perform from outp"
+    }, 
+    {   "source": {
+            "id": "cnn", 
+            "name": "CNN"
+            }, 
+            "author": "Kara Scannell", 
+            "title": "Hunter Biden sues the IRS, alleging agents illegally released his tax information - CNN", 
+            "description": "Hunter Biden sued the Internal Revenue Service on Monday, alleging its agents illegally released his tax information and that the agency failed to protect his private records.", 
+            "url": "https://www.cnn.com/2023/09/18/politics/hunter-biden-irs/index.html", 
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/230913175420-hunter-biden-file-091323.jpg?c=16x9&q=w_800,c_fill", 
+            "publishedAt": "023-09-18T12:11:00Z", 
+            "content": "Hunter Biden sued the Internal Revenue Service on Monday, alleging its agents illegally released his tax information and that the agency failed to protect his private records. President Joe Bidens"
+    }]
+}
