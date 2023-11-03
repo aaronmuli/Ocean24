@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ocean24/pages/wrapper.dart';
+import 'package:ocean24/pages/home_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
@@ -18,10 +18,11 @@ class MyApp extends StatelessWidget {
       title: 'Ocean 24',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: "Poppins",
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Wrapper(),
+      home: const HomePage(),
     );
   }
 }

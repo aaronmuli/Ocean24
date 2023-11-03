@@ -48,29 +48,28 @@ class NewsApi {
         for (var article in jsonRes["articles"]) {
           NewsData newsdata = NewsData(article);
 
-          topHeadlines.add({
-            "title": newsdata.title,
-            "author": newsdata.author,
-            "content": newsdata.content,
-            "pageURL": newsdata.pageURL,
-            "imageURL": newsdata.imageURL,
-            "publishedAt": newsdata.publishedAt,
-            "sourceID": newsdata.sourceID,
-            "sourceName": newsdata.sourceName
-          });
+          if (newsdata.title != "[Removed]") {
+            topHeadlines.add({
+              "title": newsdata.title,
+              "author": newsdata.author,
+              "content": newsdata.content,
+              "pageURL": newsdata.pageURL,
+              "imageURL": newsdata.imageURL,
+              "publishedAt": newsdata.publishedAt,
+              "sourceID": newsdata.sourceID,
+              "sourceName": newsdata.sourceName
+            });
+          }
         }
 
         return topHeadlines;
       } else {
         errorMessage = "something went wrong, please try again";
-
         return [];
       }
     } catch (e) {
       errorMessage =
           "something went wrong, please check your internet connection";
-      // errorMessage = e.toString();
-
       return [];
     }
   }

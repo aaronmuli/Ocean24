@@ -7,40 +7,32 @@ import 'package:ocean24/services/news_api.dart';
 @immutable
 class NewsState {
   final List newsData;
-  final List newsSearchData;
   final bool isLoading;
 
-  const NewsState(
-      {required this.newsData,
-      required this.newsSearchData,
-      this.isLoading = true});
+  const NewsState({required this.newsData, this.isLoading = true});
 
   NewsState copyWith({bool? isLoading, List? newsData, List? newsSearchData}) {
     return NewsState(
         newsData: newsData ?? this.newsData,
-        newsSearchData: newsSearchData ?? this.newsSearchData,
         isLoading: isLoading ?? this.isLoading);
   }
 }
 
 class NewsNotifier extends StateNotifier<NewsState> {
-  NewsNotifier() : super(const NewsState(newsData: [], newsSearchData: [])) {
+  NewsNotifier() : super(const NewsState(newsData: [])) {
     loadNews();
   }
 
   loadNews() async {
-    state = const NewsState(isLoading: true, newsData: [], newsSearchData: []);
+    state = const NewsState(isLoading: true, newsData: []);
     final newsResponse = await NewsApi().getHeadlines();
-    state = NewsState(
-        newsData: newsResponse, newsSearchData: const [], isLoading: false);
+    state = NewsState(newsData: newsResponse, isLoading: false);
   }
 
   loadSearchedNews(Map<String, dynamic> filters) async {
-    state = const NewsState(newsData: [], newsSearchData: [], isLoading: true);
+    state = const NewsState(newsData: [], isLoading: true);
     final newsResponse = await NewsApi().searchNews(filters);
-    final headlines = await NewsApi().getHeadlines();
-    state = NewsState(
-        newsData: headlines, newsSearchData: newsResponse, isLoading: false);
+    state = NewsState(newsData: newsResponse, isLoading: false);
   }
 }
 

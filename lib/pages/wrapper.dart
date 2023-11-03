@@ -32,7 +32,7 @@ class _WrapperState extends State<Wrapper> {
             NavigationDestination(
                 icon: Icon(Icons.settings), label: "settings"),
           ]),
-      body: screens[currentSelected],
+      body: SafeArea(child: screens[currentSelected]),
     );
   }
 }

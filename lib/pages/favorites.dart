@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Settings extends StatefulWidget {
-  const Settings({super.key});
+class Favorites extends StatefulWidget {
+  const Favorites({super.key});
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<Favorites> createState() => _FavoritesState();
 }
 
-class _SettingsState extends State<Settings> {
+class _FavoritesState extends State<Favorites> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _SettingsState extends State<Settings> {
             icon: Icon(Icons.arrow_back)),
       ),
       body: Center(
-        child: Text("settings"),
+        child: Text("favorites"),
       ),
     );
   }
